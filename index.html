@@ -19,28 +19,63 @@
     <main class="main">
       <section class="section-product__wrap">
         <div class="container">
-          <div class="row product-detail gap-30">
+          <div class="row product-detail sm-nowrap gap-30">
             <div class="col detail-item-media d-flex flex-column gap-15">
               <div class="detail-media__main">
                 <img
                   src="./assets/image/product/product-main.jpg"
                   alt=""
-                  class="media-main__img"
+                  class="media-main__img w-100 h-100 mySlice"
+                />
+                <img
+                  src="https://i.pinimg.com/564x/19/a8/94/19a894a1424c5e8a105b5bf5afae4d03.jpg"
+                  alt=""
+                  class="media-main__img w-100 h-100 d-none mySlice"
+                />
+                <img
+                  src="https://i.pinimg.com/564x/69/2c/f5/692cf547634ccb61ccecf7e62475e00f.jpg"
+                  alt=""
+                  class="media-main__img w-100 h-100 d-none mySlice"
+                />
+                <img
+                  src="https://i.pinimg.com/564x/2a/df/18/2adf18a7677e8ea98997c2f514ece2b0.jpg"
+                  alt=""
+                  class="media-main__img w-100 h-100 d-none mySlice"
                 />
               </div>
-              <div class="detail-media__sub d-flex flex-row gap-15">
-                <div class="meida-sub__item">
+              <div
+                class="detail-media__sub scroll-snap__list d-flex flex-row gap-15"
+              >
+                <div class="meida-sub__item scroll-snap__item">
                   <img
+                    onclick="currentDiv(1)"
                     src="./assets/image/product/product-sub-2.png"
                     alt=""
-                    class="media-sub__img"
+                    class="media-sub__img imgItem"
                   />
                 </div>
-                <div class="meida-sub__item">
+                <div class="meida-sub__item scroll-snap__item">
                   <img
+                    onclick="currentDiv(2)"
                     src="./assets/image/product/product-sub-2.png"
                     alt=""
-                    class="media-sub__img"
+                    class="media-sub__img imgItem"
+                  />
+                </div>
+                <div class="meida-sub__item scroll-snap__item">
+                  <img
+                    onclick="currentDiv(3)"
+                    src="https://i.pinimg.com/564x/69/2c/f5/692cf547634ccb61ccecf7e62475e00f.jpg"
+                    alt=""
+                    class="media-sub__img imgItem"
+                  />
+                </div>
+                <div class="meida-sub__item scroll-snap__item">
+                  <img
+                    onclick="currentDiv(4)"
+                    src="https://i.pinimg.com/564x/2a/df/18/2adf18a7677e8ea98997c2f514ece2b0.jpg"
+                    alt=""
+                    class="media-sub__img imgItem"
                   />
                 </div>
               </div>
@@ -66,14 +101,16 @@
                   class="media-prize__item prize-w-smal"
                 />
               </div>
-              <div class="item-strength d-flex flex-column ">
+              <div class="item-strength d-flex flex-column">
                 <span class="d-flex align-center">
                   <img
                     src="./assets/image/icon/check.svg"
                     alt=""
                     class="icon-strength"
                   />
-                  <span class="item-strength__text heading-16">WORLDWIDE SHIPPING</span>
+                  <span class="item-strength__text heading-16"
+                    >WORLDWIDE SHIPPING</span
+                  >
                 </span>
                 <span class="d-flex align-center">
                   <img
@@ -81,7 +118,9 @@
                     alt=""
                     class="icon-strength"
                   />
-                  <span class="item-strength__text heading-16">FREE RETURNING</span>
+                  <span class="item-strength__text heading-16"
+                    >FREE RETURNING</span
+                  >
                 </span>
                 <span class="d-flex align-center">
                   <img
@@ -89,10 +128,270 @@
                     alt=""
                     class="icon-strength"
                   />
-                  <span class="item-strength__text heading-16">SUPPORT 24/7</span>
+                  <span class="item-strength__text heading-16"
+                    >SUPPORT 24/7</span
+                  >
                 </span>
               </div>
+              <form
+                action=""
+                class="form-detail d-flex align-center justify-between"
+              >
+                <div class="form-number__change d-flex">
+                  <button
+                    class="btn-dec button-nomarl button-hover text-center"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    value="1"
+                    class="input-change border-50 text-center"
+                  />
+                  <button
+                    class="btn-inc button-nomarl button-hover text-center"
+                  >
+                    +
+                  </button>
+                </div>
+                <button
+                  class="btn-submit__form w-100 button-nomarl button-hover heading-16"
+                >
+                  Buy Now
+                </button>
+              </form>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-description__wrap">
+        <div class="container">
+          <div class="select-button__list d-flex flex-row f-wrap">
+            <button id="reviview" onclick="openCity('event ,reviview')" class="select-btn__item tabslink button-nomarl button-hover">
+              Overview
+            </button>
+            <button id="specifications" onclick="openCity('event , specifications')" class="select-btn__item tabslink button-nomarl button-hover">
+              Specifications
+            </button>
+            <button id="feature" onclick="openCity('event ,feature ')" class="select-btn__item tabslink button-nomarl button-hover">
+              Product feature
+            </button>
+            <button id="shot" onclick="openCity('event , shot')" class="select-btn__item tabslink button-nomarl button-hover">
+              Shot by cannon 6D
+            </button>
+          </div>
+          <!-- reviview -->
+          <div id="reviview"
+            class=" tabcontent row  description-item flex-row md-nowrap item-overview d-flex flex-column"
+          >
+            <div style="--w-lg: 6" class="col desc-overview__text">
+              <p class="text-item">
+                <span class=""> - 20.2 Megapixel, full-frame CMOS sensor </span>
+              </p>
+              <p class="text-item">
+                <span class=""> - DIGIC 5+ processor</span>
+              </p>
+              <p class="text-item">
+                <span class=""
+                  >- ISO 100 to 25600 as standard, ISO 50 to 102400 with
+                  expansion
+                </span>
+              </p>
+              <p class="text-item">
+                <span class=""> - Built-in Wi-Fi</span>
+              </p>
+              <p class="text-item">
+                <span class=""> - Built-in GPS* function</span>
+              </p>
+              <p class="text-item">
+                <span class=""> - High Precision 11-point AF System</span>
+              </p>
+              <p class="text-item">
+                <span class="">
+                  - Up to 4.5fps shooting speed and Silent Shooting mode</span
+                >
+              </p>
+              <p class="text-item">
+                <span class="">
+                  - Large and bright 97% coverage viewfinder with 0. 71x
+                  magnification</span
+                >
+              </p>
+              <p class="text-item">
+                <span class=""> - 3-inch (3:2) 1.04M dots Clear View LCD</span>
+              </p>
+              <p class="text-item">
+                <span class=""> - Electronic Level </span>
+              </p>
+              <p class="text-item">
+                <span class=""> - Full HD "EOS Movie" shooting</span>
+              </p>
+              <p class="text-item">
+                <span class=""
+                  >- Compatible with UHS-I standard SDHC/ SDXC memory card
+                </span>
+              </p>
+              <p class="text-item">
+                <span class=""
+                  >- Rigid Magnesium Alloy Body with enhanced dust and water
+                  resistance performance
+                </span>
+              </p>
+            </div>
+            <div style="--w-lg: 6" class="col desc-media">
+              <iframe
+                class="w-100 h-100"
+                src="https://www.youtube.com/embed/5ccSqPKuQA4"
+                title="sometimes I miss the old days | a playlist"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <!-- Specifications -->
+          <div id="specifications" class="tabcontent d-none description-item item-specifications">
+            <table class="table-specifications w-100">
+              <tr class="specifications-row">
+                <td class="specifications-col heading-16">Effective Pixels</td>
+                <td class="specifications-col heading-16 t-end text-start">20.2 MP</td>
+              </tr>
+              <tr class="specifications-row">
+                <td class="specifications-col heading-16">ISO Range</td>
+                <td class="specifications-col heading-16 t-end text-start">
+                  100-25600 standard 50-102800 expanded
+                </td>
+              </tr>
+              <tr class="specifications-row">
+                <td class="specifications-col heading-16">No of AF points</td>
+                <td class="specifications-col heading-16 t-end text-start">11</td>
+              </tr>
+              <tr class="specifications-row">
+                <td class="specifications-col heading-16">Screen</td>
+                <td class="specifications-col heading-16 t-end text-start">
+                  3" 1,040,000 dots
+                </td>
+              </tr>
+              <tr class="specifications-row">
+                <td class="specifications-col heading-16">Viewfinder</td>
+                <td class="specifications-col heading-16 t-end text-start">
+                  97% coverage 0.71x magnification
+                </td>
+              </tr>
+              <tr class="specifications-row">
+                <td class="specifications-col heading-16">Built-in flash</td>
+                <td class="specifications-col heading-16 t-end text-start">
+                  Built-in flash
+                </td>
+              </tr>
+              <tr class="specifications-row">
+                <td class="specifications-col heading-16">Continuous drive</td>
+                <td class="specifications-col heading-16 t-end text-start">4.5 fps</td>
+              </tr>
+            </table>
+          </div>
+          <!-- Product feature -->
+          <div id="feature" class="tabcontent description-item item-feature d-none">
+            <div class="row feature-list">
+              <div class="col" style="--w-lg:3">
+                <div class="card-feature d-flex align-center flex-column">
+                  <img
+                    src="./assets/image/icon/codesanbox.svg"
+                    alt=""
+                    class="card-media"
+                  />
+                  <div class="card-body__feature text-center">
+                    <h3 class="card-feature__title heading-18">FEATURE 1</h3>
+                    <p class="card-feature__text heading-16">
+                      Highlight key information to make people quickly impressed
+                      by your product
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col" style="--w-lg:3">
+                <div class="card-feature d-flex align-center flex-column">
+                  <img
+                    src="./assets/image/icon/codesanbox.svg"
+                    alt=""
+                    class="card-media"
+                  />
+                  <div class="card-body__feature text-center">
+                    <h3 class="card-feature__title heading-18">FEATURE 1</h3>
+                    <p class="card-feature__text heading-16">
+                      Highlight key information to make people quickly impressed
+                      by your product
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col" style="--w-lg:3">
+                <div class="card-feature d-flex align-center flex-column">
+                  <img
+                    src="./assets/image/icon/codesanbox.svg"
+                    alt=""
+                    class="card-media"
+                  />
+                  <div class="card-body__feature text-center">
+                    <h3 class="card-feature__title heading-18">FEATURE 1</h3>
+                    <p class="card-feature__text heading-16">
+                      Highlight key information to make people quickly impressed
+                      by your product
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col" style="--w-lg:3">
+                <div class="card-feature d-flex align-center flex-column">
+                  <img
+                    src="./assets/image/icon/codesanbox.svg"
+                    alt=""
+                    class="card-media"
+                  />
+                  <div class="card-body__feature text-center">
+                    <h3 class="card-feature__title heading-18">FEATURE 1</h3>
+                    <p class="card-feature__text heading-16">
+                      Highlight key information to make people quickly impressed
+                      by your product
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shot by cannon 6D -->
+          <div id="shot" class="tabcontent description-item item-shot__cannon d-none">
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_1.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_1.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_3.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_2.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_2.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_2.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_2.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_2.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_2.png" alt="" class="shot-item__img">
+              </div>
+              <div class="shot-item w-100">
+                <img src="./assets/image/product/shot_2.png" alt="" class="shot-item__img">
+              </div>
           </div>
         </div>
       </section>
