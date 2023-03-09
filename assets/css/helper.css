@@ -29,6 +29,9 @@
 .t-end{
     text-align: end;
 }
+.justify-center{
+    justify-content: center;
+}
 .justify-between{
     justify-content: space-between;
 }
@@ -41,8 +44,15 @@
 .gap-15{
     gap: 15px;
 }
+.gap-16{
+    gap: 16px;
+}
 .gap-30{
     gap:30px;
+}
+
+.gap-24{
+    gap: 24px;
 }
 
 @media(min-width: 578px){
@@ -63,6 +73,9 @@
     }
     .md-nowrap{
         flex-wrap: nowrap;
+    }
+    .md-gap-0{
+        gap: 0;
     }
 }
 @media(min-width: 768px){
