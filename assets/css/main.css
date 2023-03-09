@@ -91,14 +91,35 @@ li {
 .activeslicce {
   background-color: var(--background-light-blue);
 }
-.slick-dots li button:before {
-    font-size: 20px !important;
-    top: 40px !important;
-    color: var(--background-white) !important;
-    /* color: var(--background-light-blue) !important; */
+.slick-dots li{
+    top: 40px;
+    background: none;
+    border-radius: 50px;
+    border: 2px solid var(--background-white);
 }
-
-
+.slick-dots li button{
+    border-radius: 50px;
+    width: 0 !important;
+    height: 0 !important;
+    top: 40px;
+    /* position: relative; */
+}
+.slick-dots li button:before {
+    font-size: 0 !important;
+    width: 10px !important;
+    height: 10px !important;
+    background-color: var(--background-white);
+    opacity: 1 !important;
+    border-radius: 50px;
+    top: 3px !important;
+    left: 3px !important;
+}
+li.slick-active{
+    border: 2px solid var(--background-light-blue) !important;
+}
+li.slick-active button::before{
+    background-color: var(--background-light-blue);
+}
 /* header */
 
 /* main */
