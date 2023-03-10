@@ -95,6 +95,9 @@
   .text-start {
     text-align: start;
   }
+  .padding-100{
+    padding: 100px 0;
+  }
 }
 @media (min-width: 992px) {
   .lg-block {

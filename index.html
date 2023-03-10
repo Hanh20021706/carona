@@ -39,7 +39,7 @@
 
     <!-- main -->
     <main class="main">
-      <section class="section-product__wrap">
+      <section class="section-product__wrap section">
         <div class="container">
           <div class="row product-detail sm-nowrap gap-30-row">
             <div class="col detail-item-media d-flex flex-column gap-15">
@@ -163,17 +163,18 @@
                   <button
                     class="btn-dec button-nomarl button-hover text-center"
                   >
-                    -
+                    <img src="./assets/image/icon/minus.svg" class="btn-img__min" alt="">
                   </button>
                   <input
                     type="text"
                     value="1"
-                    class="input-change border-50 text-center"
+                    class="input-change border-50 text-center heading-16"
                   />
                   <button
-                    class="btn-inc button-nomarl button-hover text-center"
+                    class="btn-inc button-nomarl button-hover heading-16 text-center"
                   >
-                    +
+                  <img src="./assets/image/icon/plus.svg" class="btn-img__plus" alt="">
+
                   </button>
                 </div>
                 <button
@@ -192,25 +193,25 @@
             <button
               id="defaultOpen"
               onclick="openselect(event,'reviview')"
-              class="select-btn__item tabslink button-nomarl button-hover"
+              class="select-btn__item heading-16 tabslink button-nomarl button-hover"
             >
               Overview
             </button>
             <button
               onclick="openselect(event,'specifications')"
-              class="select-btn__item tabslink button-nomarl button-hover"
+              class="select-btn__item heading-16 tabslink button-nomarl button-hover"
             >
               Specifications
             </button>
             <button
               onclick="openselect(event,'feature')"
-              class="select-btn__item tabslink button-nomarl button-hover"
+              class="select-btn__item heading-16 tabslink button-nomarl button-hover"
             >
               Product feature
             </button>
             <button
               onclick="openselect(event,'shot')"
-              class="select-btn__item tabslink button-nomarl button-hover"
+              class="select-btn__item heading-16 tabslink button-nomarl button-hover"
             >
               Shot by cannon 6D
             </button>
@@ -499,7 +500,7 @@
           </div>
         </div>
       </section>
-      <section class="section-customer__wrap">
+      <section class="section-customer__wrap section padding-100">
         <div class="container">
           <h2 class="heading-customer heading-32 text-center">
             Our Customer Say
@@ -710,7 +711,7 @@
           </div>
         </div>
       </section>
-      <section class="colection-wrap">
+      <section class="colection-wrap section padding-100">
         <div class="container">
           <div class="row gap-30-row">
             <div class="col" style="--w-md: 6; --w-lg: 3">
@@ -802,7 +803,7 @@
           </div>
         </div>
       </section>
-      <section class="section-related__wrap">
+      <section class="section-related__wrap section padding-100">
         <div class="container">
           <h2 class="relate-title heading-32 text-center">
             You Might Also Like

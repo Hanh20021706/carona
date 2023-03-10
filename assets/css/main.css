@@ -43,6 +43,10 @@ li {
   font-weight: 400;
 }
 
+.section{
+  padding: 80px 0;
+}
+
 /* heading */
 
 .heading-16 {
@@ -127,7 +131,7 @@ li.slick-active button::before{
 /* section product detai */
 .section-product__wrap {
   background-color: var(--background-black);
-  padding: 80px 0;
+
 }
 .detail-media__main {
   flex: 1;
@@ -208,6 +212,11 @@ li.slick-active button::before{
   border-radius: 50px;
   background: var(--background-gray-black);
 }
+.btn-img__min,.btn-img__plus{
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+}
 .input-change {
   width: 80px;
   height: 50px;
@@ -286,7 +295,6 @@ li.slick-active button::before{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 80px 0;
 }
 .customer-review {
   margin-top: 56px;
@@ -325,7 +333,6 @@ li.slick-active button::before{
 
 .colection-wrap{
     background-color: var(--background-black);
-    padding: 80px 0;
 }
 .card-first{
     background: url(../image/background/bg-2.png) top center / cover no-repeat;
@@ -336,14 +343,12 @@ li.slick-active button::before{
     background-color: var(--background-light-blue);
 }
 .section-related__wrap{
-    padding: 80px 0;
     background-color: var(--background-light-black);
 }
 .related-list{
     margin-top: 56px;
 }
 .card-media__colection{
-    max-height: 269px;
     object-fit: cover;
     aspect-ratio: 1;
 }
@@ -368,7 +373,8 @@ li.slick-active button::before{
 
 @media (min-width: 768px) {
     .section-product__wrap ,.section-customer__wrap,.colection-wrap ,.section-related__wrap{
-        padding: 120px 0;
+        padding-top: 120px;
+        padding-bottom: 100px;
     }
   .table-specifications {
     max-width: 570px;
